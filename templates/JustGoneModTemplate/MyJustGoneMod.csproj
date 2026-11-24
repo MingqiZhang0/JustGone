@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>MyJustGoneMod</AssemblyName>
+    <RootNamespace>MyJustGoneMod</RootNamespace>
+    <Version>0.1.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+
+    <!-- Override via -p:GameDir="..." and -p:JustGoneSdkDir="..." -->
+    <GameDir Condition="'$(GameDir)' == ''">F:\Steam\steamapps\common\Just Go</GameDir>
+    <JustGoneSdkDir Condition="'$(JustGoneSdkDir)' == ''">..\..\lib\net472</JustGoneSdkDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="JustGone">
+      <HintPath>$(JustGoneSdkDir)\JustGone.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameDir)\JustGo_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameDir)\JustGo_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

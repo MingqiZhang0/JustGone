@@ -1,0 +1,36 @@
+# Build outputs
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Local sandbox, isolated Unity copy, test harnesses, and release staging
+sandbox/
+release/
+artifacts/
+
+# Game assemblies & binaries (never commit)
+Assembly-CSharp*.dll
+UnityEngine*.dll
+Unity.*.dll
+Sirenix.*.dll
+BepInEx.dll
+0Harmony.dll
+JustGo.exe
+JustGo_Data/
+steam_appid.txt
+
+# User saves, credentials & private data
+*.es3
+*.sav
+*.env
+.env*
+*credentials*
+*secret*
+*apikey*
+
+# Logs & temporary files
+*.log
+*.tmp
+*.bak

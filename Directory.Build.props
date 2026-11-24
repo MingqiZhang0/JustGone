@@ -1,0 +1,16 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Default Just Go installation directory (overridable via -p:GameDir=...) -->
+    <GameDir Condition="'$(GameDir)' == ''">F:\Steam\steamapps\common\Just Go</GameDir>
+    <GameManaged>$(GameDir)\JustGo_Data\Managed</GameManaged>
+    <GameBepInExCore>$(GameDir)\BepInEx\core</GameBepInExCore>
+
+    <LangVersion>8.0</LangVersion>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <CodePage>65001</CodePage>
+    <NoWarn>$(NoWarn);CS0649;CS0169;CS0414</NoWarn>
+  </PropertyGroup>
+
+</Project>

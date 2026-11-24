@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>JustGone.Example.CustomModeAndUi</AssemblyName>
+    <RootNamespace>JustGone.Example.CustomModeAndUi</RootNamespace>
+    <Version>0.1.0</Version>
+    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!-- PROOF OF ISOLATION: No Assembly-CSharp.dll and no 0Harmony.dll referenced! -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\JustGone\JustGone.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+    <Reference Include="BepInEx">
+      <HintPath>$(GameBepInExCore)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameManaged)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameManaged)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
